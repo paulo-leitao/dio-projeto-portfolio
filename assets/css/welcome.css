@@ -1,0 +1,100 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272822;
+
+}
+.card{
+    max-height: 400px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1);
+    color: azure;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+#bg-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    opacity: .1;
+    -webkit-mask-image: url(../imgs/Valknut.svg.png);
+    mask-image: url(../imgs/Valknut.svg.png);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: 0.3s;
+}
+#bg-welcome>img{
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+.card-wrapper::before{
+    content: '';
+    align-items: center;
+    justify-content: center;
+    display: block;
+    position: absolute;
+    width: 500px;
+    border: 1px solid white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px rgba(0,0,0,.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+.card-wrapper p{
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px rgba(0,0,0,.5);
+    transition: 0.3s;
+    margin-bottom: 0;
+}
+
+.card:hover> #bg-welcome {
+    opacity: .2;
+}
+
+.card:hover >.card-wrapper::before {
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    font-size: 20px;
+    opacity: 1;
+    visibility: visible;
+}
