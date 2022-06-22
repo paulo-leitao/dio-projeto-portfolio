@@ -34,4 +34,3 @@ Here we can see some effects made completely using CSS:
 ## New Features
 
 After that I decided to implement a simple javascript to disable the menu when the user click anywhere on the screen or when some menu item is selected.
-
